@@ -5,26 +5,40 @@ import { Button } from "@/components/ui/button";
 
 const songs = [
   {
-    name: "Night we met an dluagh",
-    artist: "Artist 1",
-    duration: "3:45",
+    name: "Night we met",
+    artist: "Lord Huron",
     poster: "/poster.jpg",
     time: "4 min",
     isPlaylist: false,
   },
   {
-    name: "Song 1",
-    artist: "Artist 1",
-    duration: "3:45",
-    poster: "/poster.jpg",
+    name: "Lonesome Dreams",
+    artist: "Lord Huron",
+    poster: "/lsd.jpg",
     time: "7 min",
     isPlaylist: false,
   },
   {
-    name: "Song 1",
-    artist: "Artist 1",
+    name: "Little dark age",
+    artist: "MGMT",
     duration: "3:45",
-    poster: "/poster.jpg",
+    poster: "/lt.jpg",
+    time: "1 hr",
+    noOfSongs: 10,
+    isPlaylist: false,
+  },
+  {
+    name: "Strange Trails",
+    artist: "Lord Huron",
+    poster: "/st.jpg",
+    time: "1 hr",
+    noOfSongs: 10,
+    isPlaylist: true,
+  },
+  {
+    name: "Long Lost",
+    artist: "Lord Huron",
+    poster: "/ll.jpg",
     time: "1 hr",
     noOfSongs: 10,
     isPlaylist: true,
@@ -46,7 +60,7 @@ const UserNavbar = () => {
           <PlayList songs={songs} name="Recently Played" />
           <PlayList songs={songs} name="My Playlist" />
           <Button variant={"default"} className="w-[90%] mt-2">
-            <Plus className="h-5 w-5 mr-2 "/>
+            <Plus className="h-5 w-5 mr-2 " />
             Create New Playlist
           </Button>
         </div>
