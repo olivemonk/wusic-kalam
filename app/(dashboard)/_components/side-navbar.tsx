@@ -77,7 +77,7 @@ const SideNavbar = () => {
   };
 
   return (
-    <div className=" select-none">
+    <div className="select-none">
       {isClosed ? (
         <div className="">
           <div className="h-screen bg-zinc-200 dark:bg-black w-[60px] p-2 flex flex-col items-center justify-between">
