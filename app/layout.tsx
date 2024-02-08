@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Wusic",
   description: "A music streaming service for everyone.",
+  icons: {
+    icon: '/logo.svg',
+  },
 };
 
 export default function RootLayout({

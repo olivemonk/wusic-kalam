@@ -10,7 +10,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-bold">
             Massa Yo
           </h1>
-          <h3 className="ml-1 text-lg">by Kalam's</h3>
+          <h3 className="ml-1 text-lg">by Kalam&apos;s</h3>
           <Button className="mt-4">Listen Now</Button>
         </div>
         <div className="">
