@@ -49,23 +49,23 @@ const SideNavbar = () => {
       {
         icon: Download,
         label: "Download",
-        active: pathname === "/xyz",
-        href: "/",
+        active: pathname === "/downloads",
+        href: "/downloads",
       },
       {
         icon: Heart,
         label: "Favourites",
-        active: pathname === "/xyz",
-        href: "/",
+        active: pathname === "/favourites",
+        href: "/favourites",
       },
       {
         icon: FileAudio2,
-        label: "LocalFiles",
-        active: pathname === "/xyz",
-        href: "/",
+        label: "Local Files",
+        active: pathname === "/local-files",
+        href: "/local-files",
       },
     ],
-    []
+    [pathname]
   );
 
   const currentSong = useRecoilValue(currentSongState);

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="w-full px-10 mx-auto select-none ">
+    <div className="w-full px-10 mx-auto select-none mt-4 ">
       <div className="bg-orange-700 w-[100%] h-auto flex items-center justify-between rounded-md">
         <div className="p-10">
           <p className="mb-2 ml-1 text-xs text-zinc-100">New Album</p>

@@ -1,7 +1,8 @@
+import { ScrollArea } from "@/components/ui/scroll-area";
 import Navbar from "../_components/navbar";
-import Collections from "./_components/collections";
+import Collections from "../collections/_components/collections";
 
-const CollectionsPage = () => {
+const LocalFilesPage = () => {
   const collections = [
     {
       name: "Long Lost",
@@ -28,13 +29,17 @@ const CollectionsPage = () => {
       played: "3 weeks ago",
     },
   ];
-
   return (
     <div className="bg-zinc-300 w-full px-3 dark:bg-neutral-900 ">
       <Navbar />
-      <Collections title="Your Collections" collections={collections} isPlusVisible />
+      <ScrollArea className="h-[89vh] w-full">
+        <Collections
+          title="Your Local Files"
+          collections={collections}
+        />
+      </ScrollArea>
     </div>
   );
 };
 
-export default CollectionsPage;
+export default LocalFilesPage;
