@@ -4,9 +4,9 @@ import { RecoilRoot, atom } from "recoil";
 export const currentSongState = atom({
   key: "currentSongState",
   default: {
-    songName: "Night we met",
-    poster: "/poster.jpg",
-    artist: "Lord Huron",
+    songName: "",
+    poster: "",
+    artist: "",
   },
 });
 
