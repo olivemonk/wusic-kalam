@@ -15,7 +15,7 @@ const HomeSongs = ({title, songs}:HomeSongsProps) => {
   
 
   return (
-    <div className="px-2 lg:px-10 mx-auto mt-6">
+    <div className="px-2 lg:px-10 mx-auto mt-6 select-none">
       <div className="flex items-center justify-between mb-1">
         <p className="text-xl md:text-3xl font-semibold">{title}</p>
         <p className="text-sm text-muted-foreground hover:underline cursor-pointer">

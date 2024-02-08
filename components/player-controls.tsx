@@ -19,7 +19,7 @@ const PlayerControls = () => {
   };
 
   return (
-    <div className="w-[540px] flex flex-col items-center gap-3">
+    <div className="w-[360px] md:w-[540px] flex flex-col items-center gap-3">
       <div className="flex items-center gap-8 ">
         <Shuffle className="cursor-pointer hover:text-blue-500" />
         <SkipBack className="cursor-pointer hover:text-blue-500" />
