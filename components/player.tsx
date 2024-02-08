@@ -25,7 +25,7 @@ const Player = () => {
               <PlusSquare className="hover:text-blue-500" />
             </div>
           </div>
-          <div className="w-6/5  lg:w-5/5 mr-9  ">
+          <div className="w-6/5  lg:w-5/5 mr-2 md:mr-9 lg:mr-20  ">
             <PlayerControls />
           </div>
           <Controls />

@@ -1,3 +1,4 @@
+import { currentSongState } from "@/components/providers/recoil-context-provider";
 import {
   Table,
   TableBody,
@@ -7,6 +8,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Image from "next/image";
+import { useSetRecoilState } from "recoil";
 
 export type Collection = {
   name: string;
@@ -22,6 +24,16 @@ interface CollectionTableProps {
 }
 
 export function CollectionTable({ collections }: CollectionTableProps) {
+  const song = useSetRecoilState(currentSongState);
+
+  const handlePlay = (collection: Collection) => {
+    song({
+      songName: collection.name,
+      poster: collection.poster,
+      artist: collection.name,
+    });
+  };
+
   return (
     <Table>
       <TableHeader>
@@ -35,7 +47,11 @@ export function CollectionTable({ collections }: CollectionTableProps) {
       </TableHeader>
       <TableBody className="border-b">
         {collections.map((collection, index) => (
-          <TableRow key={index} className="cursor-pointer">
+          <TableRow
+            key={index}
+            className="cursor-pointer"
+            onClick={() => handlePlay(collection)}
+          >
             <TableCell className="font-medium">
               <div className=" flex items-center gap-4">
                 <Image

@@ -7,6 +7,7 @@ import Navbar from "./_components/navbar";
 import Hero from "./_components/hero";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import HomeSongs from "./_components/home-songs";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   const songs = [
@@ -42,7 +43,7 @@ export default function Home() {
       <Navbar />
       <ScrollArea className="h-[89vh] w-full">
         <Hero />
-        <div className="max-h-[100vh] w-full mb-[100px]">
+        <div className={cn("max-h-[100vh] w-full ", song.songName && "mb-[90px]")}>
           <HomeSongs songs={songs} title="Hello, Olivemonk" />
           <HomeSongs songs={songs} title="New releases for you" />
         </div>

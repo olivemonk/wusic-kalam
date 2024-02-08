@@ -51,9 +51,13 @@ const UserNavbar = () => {
       <div className="h-screen bg-zinc-200 dark:bg-black w-[280px] p-2 hidden sm:flex justify-start flex-col">
         <div className="flex items-center justify-between">
           <User src={"/user.png"} username="olivemonk" />
-          <div className=" flex items-center gap-3">
-            <Bell className="text-muted-foreground hover:text-blue-500 cursor-pointer" />
-            <ChevronDown className="text-muted-foreground hover:text-blue-500 cursor-pointer" />
+          <div className=" flex items-center gap-1">
+            <div className="p-2 hover:bg-zinc-900 rounded-full">
+              <Bell className="text-muted-foreground hover:text-blue-500 cursor-pointer " />
+            </div>
+            <div className="p-2 hover:bg-zinc-900 rounded-full">
+              <ChevronDown className="text-muted-foreground hover:text-blue-500 cursor-pointer" />
+            </div>
           </div>
         </div>
         <div className="flex flex-col items-center">

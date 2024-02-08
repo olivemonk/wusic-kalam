@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wusic - Music Streaming Web App (Frontend)
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Wusic is a modern and responsive music streaming web application built with Next.js, Tailwind CSS, Recoil for state management & Shacn as a component library.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The app provides an immersive ui and user-friendly experience for discovering, listening to, and managing music collections. Leveraging the power of Next.js, Wusic delivers a performant and dynamic single-page application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Responsive Design**: Wusic is designed to work seamlessly across various devices, providing an optimal user experience on both desktop and mobile.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Discover New Music**: Explore a vast library of music and discover new tracks, albums, and artists curated just for you.
 
-## Learn More
+- **Collections**: Create and manage your music collections with ease. Organize your favorite tracks and albums into personalized collections.
 
-To learn more about Next.js, take a look at the following resources:
+- **Download and Favorites**: Download your favorite tracks for offline listening and mark songs as favorites for quick access.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Local Files**: Easily access and play your locally stored music files within the app.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+- **Next.js**: A React framework for building server-rendered and statically generated web applications.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Tailwind CSS**: A utility-first CSS framework that makes styling and designing UI components efficient.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Recoil**: A state management library for React that simplifies the management of state across components.
+
+- **Shacn**: A component library that provides a set of reusable and customizable UI components for React applications.
+

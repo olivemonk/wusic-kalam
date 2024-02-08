@@ -4,6 +4,9 @@ import { Plus } from "lucide-react";
 import { Collection, CollectionTable } from "./collection-table";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useCreate } from "@/hooks/useCreate";
+import { cn } from "@/lib/utils";
+import { useRecoilValue } from "recoil";
+import { currentSongState } from "@/components/providers/recoil-context-provider";
 
 interface CollectionsProps {
   collections: Collection[];
@@ -16,6 +19,7 @@ const Collections = ({
   isPlusVisible,
   title,
 }: CollectionsProps) => {
+  const song = useRecoilValue(currentSongState);
   const create = useCreate();
   return (
     <div className="px-2 md:px-4 lg:px-10 mx-auto mt-2">
@@ -31,7 +35,12 @@ const Collections = ({
         )}
       </div>
       <div className="mt-4">
-        <ScrollArea className="h-[68vh] w-full select-none mb-[100px]">
+        <ScrollArea
+          className={cn(
+            "h-[68vh] w-full select-none",
+            song.songName && "mb-[90px]"
+          )}
+        >
           <CollectionTable collections={collections} />
         </ScrollArea>
       </div>

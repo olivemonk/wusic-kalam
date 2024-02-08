@@ -1,8 +1,16 @@
-'use client';
+"use client";
 
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
 import SearchBox from "./search-box";
 import { useRouter } from "next/navigation";
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const router = useRouter();
