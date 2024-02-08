@@ -18,7 +18,7 @@ const SongCard = ({ name, poster, description }: SongCardProps) => {
 
   return (
     <div
-      className=" p-3 rounded-md group hover:bg-zinc-950 transition hover:shadow-xl hover:mr-2 cursor-pointer select-none"
+      className=" p-3 rounded-md group hover:bg-zinc-950 transition hover:shadow-xl hover:mr-3 cursor-pointer select-none"
       onClick={handlePlay}
     >
       <div className="relative">
