@@ -48,7 +48,7 @@ const songs = [
 const UserNavbar = () => {
   return (
     <div>
-      <div className="h-screen bg-zinc-200 dark:bg-black w-[280px] p-2 flex justify-start flex-col">
+      <div className="h-screen bg-zinc-200 dark:bg-black w-[280px] p-2 hidden sm:flex justify-start flex-col">
         <div className="flex items-center justify-between">
           <User src={"/user.png"} username="olivemonk" />
           <div className=" flex items-center gap-3">

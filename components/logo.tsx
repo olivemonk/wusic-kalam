@@ -9,15 +9,14 @@ const font = Yatra_One({
 
 const Logo = () => {
   return (
-    <div className="hidden md:flex items-center gap-x-2 ">
-      <p
-        className={cn(
-          "font-extrabold text-4xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text select-none cursor-pointer",
-          font.className
-        )}
-      >
-        W
-      </p>
+    <div className="flex items-center gap-x-2 ">
+      <Image
+        src="/logo.svg"
+        alt="logo"
+        width={40}
+        height={40}
+        className="object-cover"
+      />
     </div>
   );
 };

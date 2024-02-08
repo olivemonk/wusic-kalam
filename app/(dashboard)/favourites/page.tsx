@@ -32,7 +32,7 @@ const FavouritesPage = () => {
       ];
 
   return (
-    <div className="bg-zinc-300 w-full px-3 dark:bg-neutral-900 ">
+    <div className="bg-zinc-300 w-full px-3 dark:bg-neutral-900 select-none">
       <Navbar />
       <ScrollArea className="h-[89vh] w-full">
         <Collections

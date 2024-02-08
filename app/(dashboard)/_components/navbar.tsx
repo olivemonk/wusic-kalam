@@ -3,12 +3,12 @@ import SearchBox from "./search-box";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between mx-auto px-10 py-4 select-none">
-      <div className="flex items-center gap-2">
-        <div className="p-2 hover:bg-zinc-950 rounded-full">
+    <div className="flex items-center justify-between mx-auto px-0 lg:px-10 py-4 select-none gap-3">
+      <div className="flex items-center gap-0 md:gap-1 lg:gap-2">
+        <div className="p-2 hover:bg-zinc-950 rounded-full hidden md:block">
           <ChevronLeft />
         </div>
-        <div className="p-2 hover:bg-zinc-950 rounded-full">
+        <div className="p-2 hover:bg-zinc-950 rounded-full hidden md:block">
           <ChevronRight />
         </div>
       </div>

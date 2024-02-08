@@ -12,7 +12,7 @@ const Controls = () => {
   }
 
   return (
-    <div className="flex items-center gap-8 mr-1 ">
+    <div className="hidden md:flex items-center gap-8 mr-1 ">
       <div className="flex items-center gap-2">
         <div onClick={handleMute}>
           {mute ? (

@@ -32,9 +32,9 @@ const Discover = () => {
   ];
 
   return (
-    <div className="px-10 mx-auto mt-2">
+    <div className="px-2 md:px-10 mx-auto mt-2">
       <div className=" flex items-center justify-between ">
-        <p className="text-3xl font-semibold">Discover</p>
+        <p className="text-xl md:text-3xl font-semibold">Discover</p>
         <p className="text-sm text-muted-foreground hover:underline">See all</p>
       </div>
       <div
@@ -45,7 +45,7 @@ const Discover = () => {
         lg:grid-cols-3 
         xl:grid-cols-4 
         2xl:grid-cols-5
-        gap-2
+        gap-4
         mt-2"
       >
         {songs.map((song, index) => (

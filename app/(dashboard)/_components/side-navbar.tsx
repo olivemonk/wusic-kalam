@@ -76,13 +76,15 @@ const SideNavbar = () => {
     setIsClosed((prev) => !prev);
   };
 
+  const screen = typeof window !== "undefined" && window.screen.width;
+
   return (
     <div className="select-none">
       {isClosed ? (
         <div className="">
           <div className="h-screen bg-zinc-200 dark:bg-black w-[60px] p-2 flex flex-col items-center justify-between">
             <div className="flex flex-col items-center">
-              <div onClick={isClosed ? handleSidebarClose : () => {}}>
+              <div className="mt-3 lg:mt-0" onClick={ screen as number > 640 && isClosed ? handleSidebarClose : () => {}}>
                 <Logo />
               </div>
               <div className="flex flex-col gap-3 mt-[28px]">
