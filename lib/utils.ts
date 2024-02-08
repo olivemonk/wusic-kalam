@@ -13,9 +13,7 @@ export const uiFriendlyColors: string[] = [
   "#9b59b6", // Purple
   "#1abc9c", // Teal
   "#34495e", // Dark Gray/Blue
-  "#ecf0f1", // Light Gray
   "#e67e22", // Dark Orange
-  "#95a5a6"  // Light Gray/Blue
 ];
 
 

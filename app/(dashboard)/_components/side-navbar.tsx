@@ -11,7 +11,8 @@ import {
   SidebarCloseIcon,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
+import { useEffect, useMemo, useState } from "react";
 import SidebarItem from "./sidebar-item";
 import { useRecoilValue } from "recoil";
 import { currentSongState } from "@/components/providers/recoil-context-provider";
@@ -70,13 +71,21 @@ const SideNavbar = () => {
 
   const currentSong = useRecoilValue(currentSongState);
 
-  const [isClosed, setIsClosed] = useState(false);
+  const [isClosed, setIsClosed] = useState(true);
 
   const handleSidebarClose = () => {
     setIsClosed((prev) => !prev);
   };
 
-  const screen = typeof window !== "undefined" && window.screen.width;
+  const screen = useMediaQuery("(max-width: 913px)");
+
+  useEffect(() => {
+    if (screen) {
+      setIsClosed(true);
+    } else {
+      setIsClosed(false);
+    }
+  }, [screen]);
 
   return (
     <div className="select-none">
@@ -84,16 +93,19 @@ const SideNavbar = () => {
         <div className="">
           <div className="h-screen bg-zinc-200 dark:bg-black w-[60px] p-2 flex flex-col items-center justify-between">
             <div className="flex flex-col items-center">
-              <div className="mt-3 " onClick={ screen as number > 640 && isClosed ? handleSidebarClose : () => {}}>
+              <div
+                className="mt-3 "
+                onClick={!screen && isClosed ? handleSidebarClose : () => {}}
+              >
                 <Logo />
               </div>
-              <div className="flex flex-col gap-3 mt-8">
+              <div className="flex flex-col gap-3 mt-6">
                 <div className="border-t border-zinc-700 h-full"></div>
                 {routes.map((item) => (
                   <SidebarItem key={item.label} {...item} isClosed={isClosed} />
                 ))}
               </div>
-              <div className="flex flex-col gap-3 mt-8">
+              <div className="flex flex-col gap-3 mt-6">
                 <div className="border-t border-zinc-700 h-full"></div>
                 {extraRoutes.map((item) => (
                   <SidebarItem key={item.label} {...item} isClosed={isClosed} />
@@ -116,14 +128,14 @@ const SideNavbar = () => {
       ) : (
         <div className="h-screen bg-zinc-200 dark:bg-black w-[230px] p-2 flex justify-between flex-col">
           <div className="">
-            <div className="flex items-center justify-between mt-3">
+            <div className="flex items-center justify-between mt-3 ">
               <Logo />
               <SidebarCloseIcon
                 onClick={handleSidebarClose}
                 className="text-muted-foreground hover:text-blue-500"
               />
             </div>
-            <div className="flex flex-col gap-3 mt-[16px] mb-4">
+            <div className="flex flex-col gap-3 mt-8 mb-4">
               <p className="text-xs text-muted-foreground">FEATURES</p>
               {routes.map((item) => (
                 <SidebarItem key={item.label} {...item} isClosed={isClosed} />

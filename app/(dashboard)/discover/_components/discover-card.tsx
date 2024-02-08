@@ -15,7 +15,7 @@ const DiscoverCard = ({ name, poster, description }: SearchCardProps) => {
     >
       <p className="text-xl font-bold">{name}</p>
       <Image
-        className="absolute -bottom-8 -right-10 rotate-[30deg] drop-shadow-lg h-28 w-28 md:h-40 md:w-40"
+        className="absolute -bottom-8 -right-10 rotate-[30deg] drop-shadow-lg h-28 w-28 md:h-36 md:w-36 lg:h-40 lg:w-40"
         src={poster}
         alt={name}
         width={150}

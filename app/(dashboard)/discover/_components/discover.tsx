@@ -15,7 +15,7 @@ const Discover = () => {
       poster: "/lsd.jpg",
     },
     {
-      name: "New Releases",
+      name: "New Songs",
       description: "MGMT",
       poster: "/lt.jpg",
     },
