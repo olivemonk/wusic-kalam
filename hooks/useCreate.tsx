@@ -7,7 +7,7 @@ type CreateStore = {
 };
 
 export const useCreate = create<CreateStore>((set, get) => ({
-  isOpen: false,
+  isOpen: true,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),
 }));
