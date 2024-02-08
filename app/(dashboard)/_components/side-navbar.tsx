@@ -84,16 +84,16 @@ const SideNavbar = () => {
         <div className="">
           <div className="h-screen bg-zinc-200 dark:bg-black w-[60px] p-2 flex flex-col items-center justify-between">
             <div className="flex flex-col items-center">
-              <div className="mt-3 lg:mt-0" onClick={ screen as number > 640 && isClosed ? handleSidebarClose : () => {}}>
+              <div className="mt-3 " onClick={ screen as number > 640 && isClosed ? handleSidebarClose : () => {}}>
                 <Logo />
               </div>
-              <div className="flex flex-col gap-3 mt-[28px]">
+              <div className="flex flex-col gap-3 mt-8">
                 <div className="border-t border-zinc-700 h-full"></div>
                 {routes.map((item) => (
                   <SidebarItem key={item.label} {...item} isClosed={isClosed} />
                 ))}
               </div>
-              <div className="flex flex-col gap-3 mt-[28px]">
+              <div className="flex flex-col gap-3 mt-8">
                 <div className="border-t border-zinc-700 h-full"></div>
                 {extraRoutes.map((item) => (
                   <SidebarItem key={item.label} {...item} isClosed={isClosed} />
@@ -116,14 +116,14 @@ const SideNavbar = () => {
       ) : (
         <div className="h-screen bg-zinc-200 dark:bg-black w-[230px] p-2 flex justify-between flex-col">
           <div className="">
-            <div className="flex items-center justify-between ">
+            <div className="flex items-center justify-between mt-3">
               <Logo />
               <SidebarCloseIcon
                 onClick={handleSidebarClose}
                 className="text-muted-foreground hover:text-blue-500"
               />
             </div>
-            <div className="flex flex-col gap-3 mt-4 mb-4">
+            <div className="flex flex-col gap-3 mt-[16px] mb-4">
               <p className="text-xs text-muted-foreground">FEATURES</p>
               {routes.map((item) => (
                 <SidebarItem key={item.label} {...item} isClosed={isClosed} />

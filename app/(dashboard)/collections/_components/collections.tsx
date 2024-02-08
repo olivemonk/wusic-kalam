@@ -18,7 +18,7 @@ const Collections = ({
 }: CollectionsProps) => {
   const create = useCreate();
   return (
-    <div className="px-2 md:px-10 mx-auto mt-2">
+    <div className="px-2 md:px-4 lg:px-10 mx-auto mt-2">
       <div className="flex items-center justify-between">
         <p className="text-xl md:text-3xl font-semibold">{title}</p>
         {isPlusVisible && (

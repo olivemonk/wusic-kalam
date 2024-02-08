@@ -9,9 +9,9 @@ interface SongCardProps {
 
 const SongCard = ({ name, poster, description }: SongCardProps) => {
   return (
-    <div className=" p-3 rounded-md group hover:bg-zinc-950 transition hover:shadow-xl">
+    <div className=" p-3 rounded-md group hover:bg-zinc-950 transition hover:shadow-xl hover:mr-2 ">
       <div className="relative">
-        <Image src={poster} alt={name} height={210} width={210} />
+        <Image src={poster} alt={name} height={210} width={210} className="object-cover" />
         <div className="absolute right-3 bottom-3 hidden group-hover:block transition ease-in p-3 bg-blue-500 rounded-full">
           <Play className="fill-white" />
         </div>

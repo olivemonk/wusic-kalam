@@ -33,6 +33,7 @@ const PlayerControls = () => {
         <Repeat2 className="cursor-pointer hover:text-blue-500" />
       </div>
       <Slider
+        className="md:w-[80%] lg:w-[90%]"
         defaultValue={[22]}
         max={100}
         step={0.1}

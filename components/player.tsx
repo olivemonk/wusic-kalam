@@ -16,9 +16,9 @@ const Player = () => {
           <div className="flex items-center gap-10 ml-1">
             <div className="hidden md:block">
               <p className="text-zinc-100 text-lg">{song.songName}</p>
-              <p className="text-xs text-muted-foreground">{song.artist}</p>
+              <p className="text-xs text-muted-foreground mt-1">{song.artist}</p>
             </div>
-            <div className="hidden md:flex items-center gap-4 text-muted-foreground">
+            <div className="hidden lg:flex items-center gap-4 text-muted-foreground">
               <Heart className="hover:text-blue-500" />
               <PlusSquare className="hover:text-blue-500" />
             </div>

@@ -1,9 +1,7 @@
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -26,11 +24,13 @@ interface CollectionTableProps {
 export function CollectionTable({ collections }: CollectionTableProps) {
   return (
     <Table>
-      <TableHeader className="border">
-        <TableRow className=" hidden md:block">
-          <TableHead>Title</TableHead>
-          <TableHead>Date added</TableHead>
-          <TableHead className="text-right">Played</TableHead>
+      <TableHeader>
+        <TableRow>
+          <TableHead className="hidden lg:table-cell">Title</TableHead>
+          <TableHead className="hidden lg:table-cell">Date added</TableHead>
+          <TableHead className="text-right hidden lg:table-cell">
+            Last played
+          </TableHead>
         </TableRow>
       </TableHeader>
       <TableBody className="border-b">
@@ -53,10 +53,10 @@ export function CollectionTable({ collections }: CollectionTableProps) {
                 </div>
               </div>
             </TableCell>
-            <TableCell className="hidden md:block">
+            <TableCell className="hidden lg:table-cell">
               {collection.dateAdded}
             </TableCell>
-            <TableCell className="text-right hidden md:block">
+            <TableCell className="text-right hidden lg:table-cell">
               {collection.played}
             </TableCell>
           </TableRow>
